@@ -37,8 +37,26 @@ const App = () => {
   ];
 
 return (
-  
-   
+  <View>
+    {/* <Dropdown
+                //style={styles.dropdown}
+                // placeholderStyle={styles.placeholderStyle}
+                // selectedTextStyle={styles.selectedTextStyle}
+                // inputSearchStyle={styles.inputSearchStyle}
+                // iconStyle={styles.iconStyle}
+                //data={data}
+                //search
+                //maxHeight={300}
+                //labelField="label"
+                //valueField="value"
+                //placeholder="Select class"
+                //searchPlaceholder="Search class"
+                // value={value}
+                // onChange={item => {
+                // setValue(item.value);
+                // }}
+             /> */}
+             
              <FlatList
              data={movies}
              renderItem={({ item }) => <MovieListItem item={item} />}
@@ -46,7 +64,7 @@ return (
              style={{ flex: 1, marginTop: 100}}
              />
 
-             
+             </View>
     
     )
 }
