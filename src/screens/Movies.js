@@ -77,12 +77,10 @@ const Movies = () => {
         inputSearchStyle={styles.inputSearchStyle}
         iconStyle={styles.iconStyle}
         data={data}
-        search
         maxHeight={300}
         labelField="label"
         valueField="value"
         placeholder="Select class"
-        searchPlaceholder="Search class"
         value={value}
         onChange={item => {
           setValue(item.value);
