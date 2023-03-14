@@ -34,6 +34,12 @@ const movies = [
     popularity: 'Popularity:319',
     date: 'Released Date: 2021-02-18',
   },
+  {
+    id: '5',
+    title: 'Movie 5',
+    popularity: 'Popularity:319',
+    date: 'Released Date: 2021-02-18',
+  },
 ];
 
 const MovieListItem = ({item}) => (
@@ -59,17 +65,18 @@ const MovieListItem = ({item}) => (
 );
 
 const Movies = () => {
-  const [value, setValue] = useState(null);
-
+ 
   const data = [
     {label: 'Popular', value: '1'},
     {label: 'top_rated', value: '2'},
     {label: 'upcoming', value: '3'},
     {label: 'now_playing', value: '4'},
   ];
+  const [value, setValue] = useState(data[0].value);
 
   return (
     <View style={{flex: 1}}>
+      <View style={{padding: 20}}>
       <Dropdown
         style={styles.dropdown}
         placeholderStyle={styles.placeholderStyle}
@@ -86,7 +93,7 @@ const Movies = () => {
           setValue(item.value);
         }}
       />
-
+      </View>
       <FlatList
         data={movies}
         renderItem={({item}) => <MovieListItem item={item} />}
@@ -100,11 +107,13 @@ export default Movies;
 
 const styles = StyleSheet.create({
   dropdown: {
-    margin: 16,
-    height: 50,
-    borderBottomColor: 'gray',
-    borderBottomWidth: 0.5,
-    width: '90%',
+    marginLeft: 85,
+    height: 45,
+    width: '50%',
+    borderRadius: 6,
+    borderWidth: 1,
+    marginTop: 10,
+    padding: 8,
   },
   icon: {
     marginRight: 5,
