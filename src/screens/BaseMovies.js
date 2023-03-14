@@ -21,3 +21,4 @@ const BaseMovies = () => {
 };
 
 export default BaseMovies;
+
